@@ -1,0 +1,52 @@
+/*
+Theme Name: Thurston
+Theme URI: 
+Author: David Herrera
+Author URI: http://dherrera.org/
+Version: 0.1
+License: GNU General Public License
+License URI: license.txt
+Template: toolbox
+*/
+
+@import url(../toolbox/style.css);
+
+
+
+/* Structure
+ * ********************************************************************/
+
+body {
+    font: .80em/1.5 arial, freesans, sans-serif;
+}
+#page {
+    width: 860px;
+    margin: 0 auto;
+}
+#main .widget-area {
+    font-size: 90%;
+}
+
+
+
+/* Comments
+ * ********************************************************************/
+
+ol.commentlist,
+ol.commentlist ul.children {
+    list-style: none;
+}
+li.comment article.comment {
+    margin-bottom: 40px;
+    margin-left: -40px;
+}
+.comment-author {
+    background: #eee;
+    padding: 5px;
+}
+.comment-author cite {
+    font-style: normal;
+}
+.comment-author time {
+    float: right;
+}
