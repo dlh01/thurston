@@ -7,13 +7,6 @@
 if ( ! function_exists( 'toolbox_comment' ) ) :
 /**
  * Template for comments and pingbacks.
- *
- * To override this walker in a child theme without modifying the comments template
- * simply create your own toolbox_comment(), and that function will be used instead.
- *
- * Used as a callback by wp_list_comments() for displaying the comments.
- *
- * @since Toolbox 0.4
  */
 function toolbox_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
@@ -28,7 +21,7 @@ function toolbox_comment( $comment, $args, $depth ) {
                     <time pubdate datetime="<?php comment_time( 'c' ); ?>">
 					<?php
 						/* translators: 1: date, 2: time */
-						printf( __( '%1$s at %2$s', 'toolbox' ), get_comment_date(),  get_comment_time() ); ?>
+						printf( __( '%1$s', 'toolbox' ), get_comment_date() ); ?>
 					</time>				</div><!-- .comment-author .vcard -->
 				<?php if ( $comment->comment_approved == '0' ) : ?>
 					<em><?php _e( 'Your comment is awaiting moderation.', 'toolbox' ); ?></em>
@@ -41,7 +34,6 @@ function toolbox_comment( $comment, $args, $depth ) {
 
 			<div class="comment-link reply">
 				<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">Link</a>
-                <span class="sep"> | </span>
                 <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
                 <?php edit_comment_link( __( 'Edit', 'toolbox' ), ' | ' ); ?>
 			</div><!-- .reply -->
@@ -73,12 +65,7 @@ endif; // ends check for toolbox_comment()
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
-		<h2 id="comments-title">
-			<?php
-			    printf( _n( 'One response to %2$s', '%1$s responses to %2$s', get_comments_number(), 'toolbox' ),
-			        number_format_i18n( get_comments_number() ), '<em>' . get_the_title() . '</em>' );
-			?>
-		</h2>
+		<h2 id="comments-title">Discussion</h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above">
@@ -120,6 +107,6 @@ endif; // ends check for toolbox_comment()
 
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+    <?php comment_form(array('title_reply'=>'Leave a reply')); ?>
 
 </div><!-- #comments -->

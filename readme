@@ -11,21 +11,22 @@ contains some modifications I wanted for my site.
 ## comments.php ##
 
 The comment permalink and timestamp have been shifted a bit. There's no
-commenter avatar. The list of comments looks less like a list.
+commenter avatar. The list of comments looks less like a list (though it
+still is one). I also changed some of the wording and capitalization.
 
 
 
 ## content-single.php ##
 
 I don't like the way tags look at the bottom of posts (and tag posts
-inconsistently), so I removed them from the post template. You can
-restore them by just removing this file. 
+inconsistently), so I removed them from the post template. I also
+shifted the display of the metadata in the header and footer.
 
 
 
 ## content.php ##
 
-More tag-display removal.
+Same as above.
 
 
 
@@ -45,6 +46,6 @@ single.php to get them back.
 
 ## style.css ##
 
-I narrowed the site width, switched sans-serif fonts, and made the font
-size in widgets a bit smaller. Also the style declarations to finish off
-the changes in comments.
+Notably, I narrowed the site width, switched to sans-serif fonts, and
+made the font size in widgets a bit smaller. Also the style declarations
+to finish off the changes in comments.

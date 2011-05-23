@@ -1,6 +1,6 @@
 /*
 Theme Name: Thurston
-Theme URI: 
+Theme URI: http://github.com/dlh01/thurston 
 Author: David Herrera
 Author URI: http://dherrera.org/
 Version: 0.1
@@ -16,15 +16,115 @@ Template: toolbox
 /* Structure
  * ********************************************************************/
 
-body {
-    font: .80em/1.5 arial, freesans, sans-serif;
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display:block
 }
 #page {
-    width: 860px;
+    width: 780px;
     margin: 0 auto;
 }
+#content .hentry {
+    margin-bottom: 4em;
+}
+header.entry-header {
+    padding: 0 0 .34em;
+    }
+h1.entry-title {
+    margin: .67em 0 0;
+}
+ 
+
+
+/* Header
+ * ********************************************************************/
+
+#site-title {
+    font-size: 3em;
+    margin: .67em 0 .34em;
+    }
+    #site-title a {
+        color: #000;
+        text-decoration: none;
+        }
+#site-description {
+    font-weight: bold;
+}
+
+
+
+/* Menu
+ * ********************************************************************/
+
+#access {
+    background: #fff;
+    margin: 0 auto 2em;
+}
+#access ul {
+    margin-left: -1em; /* move to the left edge */
+}
+#access ul ul {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    margin-left: 0; /* compensate for the above -1em */
+}
+#access ul ul a {
+    background: #eee;
+    }
+#access li:hover > a,
+#access ul ul :hover > a {
+    background: #eee;
+    }
+#access ul ul a:hover {
+    background: #cecece;
+}
+
+
+/* Content
+ * ********************************************************************/
+
+body, select {
+    font: .80em/1.5 arial, freesans, sans-serif;
+    color: #333;
+}
+input, textarea {
+    font: 1em/1 arial, freesans, sans-serif;
+    }
+a:link {
+    color: #005689;
+    }
+a:visited {
+    color: #0B0080
+    }
+blockquote {
+    margin: 0 60px;
+}
+code {
+    font-size: 1.25em;
+}
+header.entry-header {
+    border-bottom: 1px solid #aaa;
+    }
+.entry-title {
+}
+.entry-title a {
+    color: #005689;
+    text-decoration: none;
+    }
+    .entry-title a:hover {
+        text-decoration: underline;
+        }
+.entry-meta {
+    color: #444;
+}
+    .entry-meta time {
+        }
 #main .widget-area {
-    font-size: 90%;
+    font: .9em/1.4 arial, freesans, sans-serif;
+    color: #444
+    }
+h1.page-title {
+    font-size: 1.5em;
 }
 
 

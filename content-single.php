@@ -11,16 +11,15 @@
 
 		<div class="entry-meta">
 			<?php
-				printf( __( '<span class="sep">Posted on </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'toolbox' ),
-					get_permalink(),
+				printf( __( '<span class="author vcard">%1$s</span>, <time class="entry-date" datetime="%2$s" pubdate>%3$s %4$s</time>', 'toolbox' ),
+					get_the_author(),
 					get_the_date( 'c' ),
-					get_the_date(),
-					get_author_posts_url( get_the_author_meta( 'ID' ) ),
-					sprintf( esc_attr__( 'View all posts by %s', 'toolbox' ), get_the_author() ),
-					get_the_author()
+                    get_the_time(),
+					get_the_date()
 				);
 			?>
 		</div><!-- .entry-meta -->
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -30,7 +29,7 @@
 
 	<footer class="entry-meta">
 		<?php
-            $utility_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'toolbox' );
+            $utility_text = __( 'Categorized %1$s | <a href="%3$s" title="Permalink to %4$s" rel="bookmark">Permalink</a>', 'toolbox' );
 			printf(
 				$utility_text,
 				get_the_category_list( ', ' ),
@@ -40,6 +39,6 @@
 			);
 		?>
 
-		<?php edit_post_link( __( 'Edit', 'toolbox' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'toolbox' ), '| <span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->
