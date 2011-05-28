@@ -17,11 +17,11 @@ function toolbox_comment( $comment, $args, $depth ) {
 		<article id="comment-<?php comment_ID(); ?>" class="comment">
 			<footer>
 				<div class="comment-author vcard comment-meta commentmetadata">
-					<?php printf( __( '%s', 'toolbox' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php printf( __( '%s', 'toolbox' ), sprintf( '<cite class="fn">%s</cite>, ', get_comment_author_link() ) ); ?>
                     <time pubdate datetime="<?php comment_time( 'c' ); ?>">
 					<?php
 						/* translators: 1: date, 2: time */
-						printf( __( '%1$s', 'toolbox' ), get_comment_date() ); ?>
+						printf( __( '%1$s', 'toolbox' ), get_comment_date( 'g:i a j F Y' ) ); ?>
 					</time>				</div><!-- .comment-author .vcard -->
 				<?php if ( $comment->comment_approved == '0' ) : ?>
 					<em><?php _e( 'Your comment is awaiting moderation.', 'toolbox' ); ?></em>

@@ -20,8 +20,11 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
     display:block
 }
 #page {
-    width: 780px;
+    width: 860px;
     margin: 0 auto;
+}
+#content {
+    margin: 0 360px 0 0;
 }
 #content .hentry {
     margin-bottom: 4em;
@@ -43,11 +46,12 @@ h1.entry-title {
     margin: .67em 0 .34em;
     }
     #site-title a {
-        color: #000;
+        color: #333;
         text-decoration: none;
         }
 #site-description {
-    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 2em;
 }
 
 
@@ -118,13 +122,16 @@ header.entry-header {
     color: #444;
 }
     .entry-meta time {
-        }
-#main .widget-area {
-    font: .9em/1.4 arial, freesans, sans-serif;
-    color: #444
     }
 h1.page-title {
     font-size: 1.5em;
+}
+/* 404 page */
+.error404 .widget {
+    width: 25%;
+}
+.error404 .widget_pages ul.children {
+    padding-left: 15px;
 }
 
 
@@ -147,6 +154,13 @@ li.comment article.comment {
 .comment-author cite {
     font-style: normal;
 }
-.comment-author time {
-    float: right;
-}
+
+
+
+/* Widgets
+ * ********************************************************************/
+
+#main .widget-area {
+    font: .9em/1.4 arial, freesans, sans-serif;
+    color: #444;
+    }
