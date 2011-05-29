@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Toolbox
+ * @subpackage thurston
  */
 
 get_header(); ?>
@@ -11,18 +11,18 @@ get_header(); ?>
 
 			<article id="post-0" class="post error404 not-found">
 				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'Not found', 'toolbox' ); ?></h1>
+					<h1 class="entry-title"><?php _e( 'Not found', 'thurston' ); ?></h1>
 				</header>
 
 				<div class="entry-content">
-					<p><?php _e( 'Sorry, but we can&rsquo;t find the page you were looking for. Perhaps searching, or one of the links below, can help.', 'toolbox' ); ?></p>
+					<p><?php _e( 'Sorry, but we can&rsquo;t find the page you were looking for. Perhaps searching, or one of the links below, can help.', 'thurston' ); ?></p>
 
 					<?php get_search_form(); ?>
 
 					<?php the_widget( 'WP_Widget_Recent_Posts', "title=Recent posts" ); ?>
 
 					<div class="widget">
-						<h2 class="widgettitle"><?php _e( 'Top categories', 'toolbox' ); ?></h2>
+						<h2 class="widgettitle"><?php _e( 'Top categories', 'thurston' ); ?></h2>
 						<ul>
 						<?php wp_list_categories( array( 'orderby' => 'count', 'order' => 'DESC', 'show_count' => 'TRUE', 'title_li' => '', 'number' => '10', 'hierarchical' => '0' ) ); ?>
 						</ul>

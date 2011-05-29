@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Toolbox
+ * @subpackage thurston
  */
 ?>
 		<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>

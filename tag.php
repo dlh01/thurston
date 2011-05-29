@@ -1,13 +1,25 @@
 <?php
 /**
+ * The template used to display Tag Archive pages
+ *
  * @package WordPress
  * @subpackage thurston
  */
 
 get_header(); ?>
 
-		<div id="primary">
+		<section id="primary">
 			<div id="content" role="main">
+
+				<?php the_post(); ?>
+
+				<header class="page-header">
+					<h1 class="page-title"><?php
+						printf( __( 'Tag archives: %s', 'thurston' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+					?></h1>
+				</header>
+
+				<?php rewind_posts(); ?>
 
 				<?php /* Display navigation to next/previous pages when applicable */ ?>
 				<?php if ( $wp_query->max_num_pages > 1 ) : ?>
@@ -35,7 +47,7 @@ get_header(); ?>
 				<?php endif; ?>				
 
 			</div><!-- #content -->
-		</div><!-- #primary -->
+		</section><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

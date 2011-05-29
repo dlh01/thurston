@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Toolbox
+ * @subpackage thurston
  */
 
 get_header(); ?>
@@ -11,7 +11,7 @@ get_header(); ?>
 
 				<header class="page-header">
 					<h1 class="page-title"><?php
-						printf( __( 'Category archives: %s', 'toolbox' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+						printf( __( 'Category archives: %s', 'thurston' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 					?></h1>
 
 					<?php $categorydesc = category_description(); if ( ! empty( $categorydesc ) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $categorydesc . '</div>' ); ?>
@@ -20,9 +20,9 @@ get_header(); ?>
 				<?php /* Display navigation to next/previous pages when applicable */ ?>
 				<?php if ( $wp_query->max_num_pages > 1 ) : ?>
 					<nav id="nav-above">
-						<h1 class="section-heading"><?php _e( 'Post navigation', 'toolbox' ); ?></h1>
-						<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'toolbox' ) ); ?></div>
-						<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'toolbox' ) ); ?></div>
+						<h1 class="section-heading"><?php _e( 'Post navigation', 'thurston' ); ?></h1>
+						<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'thurston' ) ); ?></div>
+						<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'thurston' ) ); ?></div>
 					</nav><!-- #nav-above -->
 				<?php endif; ?>
 				
@@ -36,9 +36,9 @@ get_header(); ?>
 				<?php /* Display navigation to next/previous pages when applicable */ ?>
 				<?php if (  $wp_query->max_num_pages > 1 ) : ?>
 					<nav id="nav-below">
-						<h1 class="section-heading"><?php _e( 'Post navigation', 'toolbox' ); ?></h1>
-						<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'toolbox' ) ); ?></div>
-						<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'toolbox' ) ); ?></div>
+						<h1 class="section-heading"><?php _e( 'Post navigation', 'thurston' ); ?></h1>
+						<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'thurston' ) ); ?></div>
+						<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'thurston' ) ); ?></div>
 					</nav><!-- #nav-below -->
 				<?php endif; ?>				
 

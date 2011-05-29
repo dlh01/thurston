@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Toolbox
+ * @subpackage thurston
  */
 ?>
 
@@ -11,7 +11,7 @@
 
 		<div class="entry-meta">
 			<?php
-				printf( __( '<span class="author vcard">%1$s</span>, <time class="entry-date" datetime="%2$s" pubdate>%3$s %4$s</time>', 'toolbox' ),
+				printf( __( '<span class="author vcard">%1$s</span>, <time class="entry-date" datetime="%2$s" pubdate>%3$s %4$s</time>', 'thurston' ),
 					get_the_author(),
 					get_the_date( 'c' ),
                     get_the_time(),
@@ -24,12 +24,12 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'toolbox' ), 'after' => '</div>' ) ); ?>
+		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'thurston' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
 		<?php
-            $utility_text = __( 'Categorized %1$s | <a href="%3$s" title="Permalink to %4$s" rel="bookmark">Permalink</a>', 'toolbox' );
+            $utility_text = __( 'Categorized %1$s | <a href="%3$s" title="Permalink to %4$s" rel="bookmark">Permalink</a>', 'thurston' );
 			printf(
 				$utility_text,
 				get_the_category_list( ', ' ),
@@ -39,6 +39,6 @@
 			);
 		?>
 
-		<?php edit_post_link( __( 'Edit', 'toolbox' ), '| <span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'thurston' ), '| <span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->

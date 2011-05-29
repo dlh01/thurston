@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Toolbox
+ * @subpackage thurston
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -25,7 +25,7 @@
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . sprintf( __( 'Page %s', 'toolbox' ), max( $paged, $page ) );
+		echo ' | ' . sprintf( __( 'Page %s', 'thurston' ), max( $paged, $page ) );
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -44,8 +44,8 @@
 	<header id="branding" role="banner">
 
 			<nav id="access" role="navigation">
-				<h1 class="section-heading"><?php _e( 'Main menu', 'toolbox' ); ?></h1>
-				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'toolbox' ); ?>"><?php _e( 'Skip to content', 'toolbox' ); ?></a></div>
+				<h1 class="section-heading"><?php _e( 'Main menu', 'thurston' ); ?></h1>
+				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'thurston' ); ?>"><?php _e( 'Skip to content', 'thurston' ); ?></a></div>
 
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #access -->
